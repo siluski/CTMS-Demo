@@ -24,7 +24,15 @@ modules:
         properties:
           srv-url: ${default-url}
     requires:
-      []
+      - name: simple-cap-auth
 
 resources:
-  []
+  - name: simple-cap-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: simple-cap-${org}-${space}
+        tenant-mode: dedicated

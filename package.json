@@ -7,7 +7,7 @@
   "private": true,
   "dependencies": {
     "@sap/cds": "^9",
-    "@sap/xssec": "^4.10.0",
+    "@sap/xssec": "^4",
     "express": "^4"
   },
   "engines": {
@@ -20,5 +20,12 @@
   },
   "scripts": {
     "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "[production]": {
+        "auth": "xsuaa"
+      }
+    }
   }
 }
