@@ -34,5 +34,5 @@ resources:
       service-plan: application
       path: ./xs-security.json
       config:
-        xsappname: simple-cap-${org}-${space}
+        xsappname: simple-cap-${space}
         tenant-mode: dedicated
