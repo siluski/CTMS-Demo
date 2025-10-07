@@ -25,6 +25,15 @@ modules:
           srv-url: ${default-url}
     requires:
       - name: simple-cap-auth
+      - name: simple-cap-db
+
+  - name: simple-cap-db-deployer
+    type: hdb
+    path: gen/db
+    parameters:
+      buildpack: nodejs_buildpack
+    requires:
+      - name: simple-cap-db
 
 resources:
   - name: simple-cap-auth
@@ -36,3 +45,8 @@ resources:
       config:
         xsappname: simple-cap-${space}
         tenant-mode: dedicated
+  - name: simple-cap-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
