@@ -2,5 +2,6 @@ using my.bookshop as my from '../db/schema';
 
 service CatalogService {
     @readonly entity Books as projection on my.Books;
-    //new comment to commit 
+    //new comment to commit
+    //added a comment for the demo 
 }
