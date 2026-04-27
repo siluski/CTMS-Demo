@@ -9,4 +9,5 @@ entity Books {
 entity Authors{
   key ID: Integer;
   name : String;
+  Books: Association to many Books;
 }
