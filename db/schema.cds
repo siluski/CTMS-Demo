@@ -7,8 +7,14 @@ entity Books {
   author : String;
 }
 
-entity Authors{
+entity Authors {
   key ID: Integer;
   name : String;
   Books: Association to many Books on Books.author = name;
+}
+
+entity Publishers{
+  key ID: Integer;
+  name: String;
+  location: String;
 }
