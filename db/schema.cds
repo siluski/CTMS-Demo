@@ -4,10 +4,11 @@ entity Books {
   key ID : Integer;
   title  : String;
   stock  : Integer;
+  author : String;
 }
 
 entity Authors{
   key ID: Integer;
   name : String;
-  Books: Association to many Books;
+  Books: Association to many Books on Books.author = name;
 }
